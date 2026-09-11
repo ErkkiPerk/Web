@@ -1,0 +1,36 @@
+
+.welcometopixar{
+text-align: center;
+font-size: 50px;
+font-family: Arial, Helvetica, sans-serif;
+color: rgb(241, 0, 0);
+margin-top: 0%;
+}
+
+.pixar_logo {
+    color: black;
+    text-align: center;
+    font-size: 160px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0px;
+}
+.animation{
+    color: black;
+    text-align: center;
+    margin-left: 180px;
+    margin-top: 0px;
+}
+.textt{
+text-align: center;
+font-size: 20px;
+max-width: 60ch;
+margin: 0 auto;
+}
+
+.pixarpng{  
+    margin-left: 220px;
+    margin-top: 0px;
+}
+
+
+

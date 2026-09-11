@@ -1,0 +1,72 @@
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 80px;
+    row-gap: 20px;
+} 
+.grid a button {
+    margin-top:10px;
+    width: 100%;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+.button:hover {
+    background-color: #4404da;
+    color: white;
+}
+body{
+    background-color: rgb(33, 32, 32);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 1%;
+    margin-top: 20px;
+}
+.button {
+    border-radius: 10px;
+    border-style: initial;
+    font-size: 30px;
+    outline: blue;
+    
+}
+.hr{
+    border-radius: 0px 0px 10px 10px;
+    border: none;
+    margin-top: 600px;
+    background-color:rgb(45, 7, 161);
+    height: 20px;
+  }
+.hr2{
+    border-radius: 10px 10px 0px 0px;
+    border: none;
+    background-color:rgb(45, 7, 161);
+    height: 20px;
+}
+    
+
+ .bild{
+    border-radius: 10px;
+    border-style: initial;
+    width: 50%;
+    margin-left: 305px;
+    margin-top: 100px;
+ }
+
+ head{
+    border-radius:20px;
+background-color: white;
+}
+main{
+    margin-top: -10px;
+    margin-bottom: -10px;
+    background-color: cornflowerblue;
+    border-radius: 25px;
+    
+}
+
+@media only screen and (max-width: 600px) {
+
+    .grid {
+        grid-template-columns:  auto;     
+    }
+  
+}

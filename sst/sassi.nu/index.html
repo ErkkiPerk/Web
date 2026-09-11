@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om oss - Sassi IT Support</title>
+    <link rel="stylesheet" href="praktisktbygge.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Sassi IT Support</h1>
+            <div class="burger">&#9776;</div>
+            <nav>
+                <a href="index.html">Hem</a>
+                <a href="om-oss.html">Om oss</a>
+                <a href="kontaktinfo.html">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- IT-supporttjänster -->
+    <section class="container">
+        <h2>IT-supporttjänster</h2>
+        <ul>
+            <li>Fjärrsupport och felsökning</li>
+            <li>Installation av mjukvara och hårdvara</li>
+            <li>Nätverkskonfiguration och routerinställningar</li>
+            <li>Säkerhetsoptimering</li>
+            <li>Webbdesign, utveckling och underhåll</li>
+            <li>Anpassade IT-konsultationer för företag</li>
+        </ul>
+    </section>
+
+    <!-- Hårdvara -->
+    <section class="container">
+        <h2>Hårdvara & datorbygge</h2>
+        <p>
+            Vi erbjuder expertrådgivning och praktisk hjälp med att bygga datorer anpassade för arbete, gaming eller
+            specialiserade behov.
+            Vi hjälper dig även att välja rätt routrar, nätverksutrustning och komponenter för optimal prestanda.
+        </p>
+    </section>
+
+    <!-- Prisplaner -->
+    <section class="container">
+        <h2>Våra prisplaner</h2>
+        <div class="pricing">
+            <div class="plan-card">
+                <h3>Grundsupport</h3>
+                <p>500 kr/timme</p>
+                <p>Perfekt för snabba lösningar och grundläggande felsökning.</p>
+                <button onclick="showModal('Grundsupport')">Kom igång</button>
+            </div>
+            <div class="plan-card">
+                <h3>Premiumsupport</h3>
+                <p>1000 kr/timme</p>
+                <p>Omfattande tjänster inklusive webbhjälp och hårdvaruuppsättning.</p>
+                <button onclick="showModal('Premiumsupport')">Kom igång</button>
+            </div>
+            <div class="plan-card">
+                <h3>Företagspaket</h3>
+                <p>Anpassad offert</p>
+                <p>Kompletta IT-lösningar för företag, inklusive löpande underhåll.</p>
+                <button onclick="showModal('Företagspaket')">Kom igång</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produktrekommendationer -->
+    <section class="container">
+        <h2>Produktrekommendationer</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="images/gaming-pc.jpg" alt="Gaming-PC">
+                <h3>Gaming-PC</h3>
+                <p>Vi rekommenderar en balanserad gaming-PC med RTX-grafikkort och snabb SSD-lagring.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/router.jpg" alt="Router">
+                <h3>Router</h3>
+                <p>Stabil och snabb router för gaming och arbete – med stöd för WiFi 6.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/headset.jpg" alt="Gaming-headset">
+                <h3>Headset</h3>
+                <p>Kristallklart ljud och en bra mikrofon för den bästa spelupplevelsen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="container">
+        <h2>Vanliga frågor</h2>
+        <div class="faq">
+            <div class="question">Vilka IT-supporttjänster erbjuder ni?</div>
+            <div class="answer">Vi erbjuder fjärrfelsökning, installation av mjukvara/hårdvara, nätverksuppsättning,
+                säkerhet och webbhjälp.</div>
+            <div class="question">Hur kan jag få en skräddarsydd dator?</div>
+            <div class="answer">Kontakta oss för en konsultation; vi guidar dig genom komponentval och bygger datorn åt
+                dig.</div>
+            <div class="question">Erbjuder ni webbutveckling?</div>
+            <div class="answer">Ja, vi designar, utvecklar och underhåller webbplatser anpassade efter dina behov.</div>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section class="container">
+        <h2>Kontakta oss</h2>
+        <p>
+            Har du frågor eller vill ha en offert? Tveka inte att kontakta oss via vårt
+            <a href="kontakt.html">kontaktformulär</a>.
+        </p>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p>För att komma igång med denna plan, vänligen <a href="kontakt.html">kontakta oss</a> för mer information.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sassi IT Support. Alla rättigheter förbehållna.</p>
+    </footer>
+
+    <script>
+        // Burgermeny
+        document.querySelector('.burger').addEventListener('click', () => {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+        // FAQ-utfällning
+        const questions = document.querySelectorAll('.question');
+        questions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        // Modal-funktioner
+        function showModal(plan) {
+            document.getElementById('modal-title').textContent = plan;
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        // Stäng modal vid klick utanför
+        window.onclick = function (event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

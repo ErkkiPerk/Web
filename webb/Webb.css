@@ -1,0 +1,84 @@
+body {
+    margin: 1%;
+    margin-top: 1%;
+    background-color: rgb(33, 32, 32);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main {
+    margin-top: -10px;
+    margin-bottom: -10px;
+    background-color: cornflowerblue;
+    border-radius: 25px;
+
+}
+
+head {
+    border-radius: 20px;
+    background-color: white;
+}
+
+.webbhistoria {
+    text-align: center;
+    font-size: 70px;
+    margin: 0px;
+
+}
+
+.textwww {
+    margin: 60px;
+    font-size: 23px;
+    margin-top: 5px;
+    margin-bottom: 35px;
+}
+
+.titel1 {
+    margin: 50px;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.länk {
+    position: absolute;
+    right: 60px;
+    margin-top: -2%;
+}
+
+.h2 {
+    margin: 0px;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+.mosiac {
+    right: 60px;
+    position: absolute;
+    margin-top: -4%;
+}
+
+.ihavnothin {
+    margin-left: 20px;
+    color: cornflowerblue;
+}
+
+.button {
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+    border-color: cornflowerblue;
+    border-style: initial;
+
+}
+
+.button:hover {
+    background-color: grey;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+   button{
+font-size: large;
+   }
+}

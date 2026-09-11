@@ -1,0 +1,248 @@
+/* ===== Återställ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Kropp ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: #e6ecef; /* Ljusgrå med blå ton */
+    color: #2d3748; /* Mörkgrå för text */
+}
+
+/* ===== Container ===== */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* ===== Header ===== */
+header {
+    background: #1a202c; /* Mörkblågrå */
+    color: #edf2f7; /* Ljusgrå för text */
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.burger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #edf2f7; /* Ljusgrå för nav-länkar */
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #38b2ac; /* Teal för hover */
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #1a202c; /* Mörkblågrå för mobilmeny */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px;
+        text-align: center;
+        border-top: 1px solid #4a5568; /* Mörkare grå för gränser */
+    }
+}
+
+/* ===== Sektioner ===== */
+section {
+    margin: 40px 0;
+    padding: 20px;
+    background: #ffffff; /* Vit bakgrund */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtil skugga */
+}
+
+section h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #1a202c; /* Mörkblågrå för rubriker */
+}
+
+/* ===== Prisplaner ===== */
+.pricing {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.plan-card {
+    background: #f7fafc; /* Ljusgrå bakgrund */
+    border: 1px solid #e2e8f0; /* Ljusgrå kant */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+}
+
+.plan-card h3 {
+    margin: 10px 0;
+    color: #2d3748; /* Mörkgrå för rubriker */
+}
+
+.plan-card p {
+    font-size: 0.9rem;
+    color: #718096; /* Mellangrå för text */
+}
+
+.plan-card button {
+    background: #38b2ac; /* Teal för knappar */
+    color: #ffffff; /* Vit text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.plan-card button:hover {
+    background: #319795; /* Mörkare teal för hover */
+}
+
+/* ===== Produktkort ===== */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: #f7fafc; /* Ljusgrå bakgrund */
+    border: 1px solid #e2e8f0; /* Ljusgrå kant */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    color: #2d3748; /* Mörkgrå för rubriker */
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #718096; /* Mellangrå för text */
+}
+
+/* ===== FAQ ===== */
+.faq .question {
+    background: #edf2f7; /* Ljusgrå bakgrund */
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #2d3748; /* Mörkgrå för text */
+}
+
+.faq .answer {
+    display: none;
+    padding: 10px;
+    background: #f7fafc; /* Ljusgrå bakgrund */
+    border: 1px solid #e2e8f0; /* Ljusgrå kant */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* ===== Modal ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Mörkare overlay */
+}
+
+.modal-content {
+    background-color: #ffffff; /* Vit bakgrund */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #4a5568; /* Mörkgrå kant */
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    color: #718096; /* Mellangrå */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #2d3748; /* Mörkgrå */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #1a202c; /* Mörkblågrå */
+    color: #edf2f7; /* Ljusgrå text */
+    margin-top: 40px;
+}
